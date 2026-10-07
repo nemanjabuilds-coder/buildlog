@@ -1,0 +1,32 @@
+{
+  "name": "buildlog",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "ng": "ng",
+    "prestart": "node --env-file-if-exists=.env scripts/write-runtime-config.mjs",
+    "start": "ng serve --host 0.0.0.0 --port 3000",
+    "prebuild": "node --env-file-if-exists=.env scripts/write-runtime-config.mjs",
+    "build": "ng build --configuration production",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json"
+  },
+  "dependencies": {
+    "@angular/common": "^20.3.0",
+    "@angular/compiler": "^20.3.0",
+    "@angular/core": "^20.3.0",
+    "@angular/forms": "^20.3.0",
+    "@angular/platform-browser": "^20.3.0",
+    "@angular/router": "^20.3.0",
+    "@supabase/supabase-js": "^2.57.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^20.3.38",
+    "@angular/cli": "^20.3.38",
+    "@angular/compiler-cli": "^20.3.0",
+    "typescript": "~5.9.2"
+  }
+}
